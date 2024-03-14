@@ -249,8 +249,7 @@ async def start(client, message):
    kep = ReplyKeyboardMarkup([
 ["السورس","قسم التفعيل والتعطيل"],
 ["قسم التعيين","قسم البوت"],
-["قسم المساعد","قسم الاذاعه"],
-["تحديث البوت","الغاء الامر"]], resize_keyboard=True)
+["قسم المساعد","قسم الاذاعه"]], resize_keyboard=True)
    return await message.reply_text("**♪ اهلا بك ، عزيزي المطور الاساسي  💎 .**", reply_markup=kep,quote=True)
  else:
   kep = ReplyKeyboardMarkup([
