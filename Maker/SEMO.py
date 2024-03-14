@@ -68,7 +68,7 @@ async def auto_bot():
         await helper(bot_username)
         await Call(bot_username)
         try:
-           await user.send_message(bot_username,"**♪ تم تنصيب البوت بنجاح  🚦⚡ .\n♪ واستخدامي حساب مساعد للبوت  🚦⚡ .**")
+           await user.send_message(bot_username,"**♪ تم تنصيب البوت بنجاح  .\n♪ واستخدامي حساب مساعد للبوت 🪩 .**")
         except:
            pass
         try:
@@ -154,12 +154,12 @@ async def botooott(client, message):
 @app.on_message(filters.command("تفعيل البوتات",""))
 async def turnon(client, message):
  if message.chat.username in OWNER:
-  m = await message.reply_text("**♪ جاري تشغيل جميع البوتات ..🚦⚡**",quote=True)
+  m = await message.reply_text("**♪ جاري تشغيل جميع البوتات ..**",quote=True)
   try:
    await auto_bot()
   except:
    pass
-  return await message.reply_text("**♪ تم تفعيل جميع البوتات  🚦⚡ .**",quote=True)
+  return await message.reply_text("**♪ تم تفعيل جميع البوتات  .**",quote=True)
 
 @app.on_message(filters.command(["تفعيل الصانع", "تعطيل الصانع"], ""))
 async def bye(client, message):
@@ -193,7 +193,7 @@ async def stratmaked(client, message):
     return
   if OFF:
       if not message.chat.username in OWNER:
-         return await message.reply_text(f"**♪ الوضع المجاني معطل الان  🚦⚡ .\n♪ راسل المطور لتنصيب مدفوع  🚦⚡ .\n♪ Dev : @{OWNER[0]}  🚦⚡ .**")
+         return await message.reply_text(f"**♪ الوضع المجاني معطل الان  🪩 .\n♪ راسل المطور لتنصيب مدفوع 🪩 .\n♪ Dev : @{OWNER[0]}  🪩 .**")
   if message.chat.username in OWNER:
     kep = ReplyKeyboardMarkup([
 ["استخراج جلسه","تحديث الصانع"],
@@ -213,7 +213,7 @@ async def stratmaked(client, message):
     kep = ReplyKeyboardMarkup([
 ["استخراج جلسه"],
 ["صنع بوت", "حذف بوت"]],resize_keyboard=True)
-    await message.reply_text(f"**👋🏻 ꒐ أهلاً بك {message.from_user.mention}   .\n في صانع ميوزك عفرتو  .**", reply_markup=kep,quote=True)
+    await message.reply_text(f"**اهلا اضغط صنع بوت لكي تصنع بوت {message.from_user.mention}   .\n في صانع ميوزك عفرتو  .**", reply_markup=kep,quote=True)
     
 @app.on_message(
     filters.command(["/alive", "معلومات", "سورس", "السورس", "• السورس •"], "")
@@ -238,10 +238,10 @@ async def alive(client: Client, message):
     )
 
     alive = f"""╭──── • ◈ • ────╮
-么 [𝐬𝐨𝐮𝐫𝐜𝐞](t.me/HLV_M) 🚦⚡ .
-么  [𝒅𝒆𝒗](t.me/ALH_KAR) 🚦⚡ .
+么 [𝐬𝐨𝐮𝐫𝐜𝐞](t.me/UI_VM) 🚦⚡ .
+么  [𝒅𝒆𝒗](t.me/VVYVVJ) 🚦⚡ .
 ╰──── • ◈ • ────╯
-🚦⚡ 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙾?? 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼  🚦⚡ ."""
+🚦⚡ 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙾n 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼  🚦⚡ ."""
 
     await message.reply_video(
         video=VIDEO,
@@ -273,33 +273,33 @@ async def cloner(app: app, message):
       return
     if OFF:
       if not message.chat.username in OWNER:
-         return await message.reply_text(f"**♪ الوضع المجاني معطل الان  🚦⚡ .\n♪ راسل المطور لتنصيب مدفوع  🚦⚡ .\n♪ Dev : @{OWNER[0]}  🚦⚡ .**")
+         return await message.reply_text(f"**♪ الوضع المجاني معطل الان  🪩 .\n♪ راسل المطور لتنصيب مدفوع  🪩 .\n♪ Dev : @{OWNER[0]}  🪩 .**")
     user_id = message.chat.id
-    tokenn = await app.ask(chat_id=user_id, text="**♪ ارسل الان توكن البوت  🚦⚡ .**", timeout=200)
+    tokenn = await app.ask(chat_id=user_id, text="**♪ ارسل الان توكن البوت  🪩 .**", timeout=200)
     token = tokenn.text
     try:
-      await tokenn.reply_text("**♪ جاري فحص التوكن ..🚦⚡**")
+      await tokenn.reply_text("**♪ جاري فحص التوكن ..🪩**")
       bot = Client("Cloner", api_id=API_ID, api_hash=API_HASH, bot_token=token, in_memory=True)
       await bot.start()
     except Exception as es:
-      return await message.reply_text("**♪التوكن غير صحيح  🚦⚡ .**")
+      return await message.reply_text("**♪التوكن غير صحيح  🪩 .**")
     bot_i = await bot.get_me()
     bot_username = bot_i.username
     if await is_served_bot(bot_username):
       await bot.stop()
-      return await message.reply_text("**♪ لا يمكن انشاء هذا البوت  🚦⚡ .**")
+      return await message.reply_text("**♪ لا يمكن انشاء هذا البوت  🪩 .**")
     if bot_username in Done:
       await bot.stop()
-      return await message.reply_text("**♪ تم انشاء هذا البوت من قبل  🚦⚡ .**")
-    session = await app.ask(chat_id=user_id, text="**♪ ارسل الان كود الجلسة  🚦⚡ .**", timeout=200)
-    await app.send_message(user_id, "**♪ جاري تشغيل البوت انتظر ..🚦⚡**")
+      return await message.reply_text("**♪ تم انشاء هذا البوت من قبل 🪩  .**")
+    session = await app.ask(chat_id=user_id, text="**♪ ارسل الان كود الجلسة   .**", timeout=200)
+    await app.send_message(user_id, "**♪ جاري تشغيل البوت انتظر ..🪩**")
     session = session.text
     user = Client("SEMO", api_id=API_ID, api_hash=API_HASH, session_string=session, in_memory=True)
     try:       
        await user.start()
     except:
        await bot.stop()
-       return await message.reply_text(f"**♪ كود الجلسه غير صالح  🚦⚡ .**")
+       return await message.reply_text(f"**♪ كود الجلسه غير صالح  🪩 .**")
     loger = await user.create_supergroup(f"مجموعة البوت", "هذه المجموعة هي عبارة عن سجل للبوت")
     if bot_i.photo:
        photo = await bot.download_media(bot_i.photo.big_file_id)
@@ -313,7 +313,7 @@ async def cloner(app: app, message):
     await user.stop()
     await bot.stop()
     if message.chat.username in OWNER:
-       dev = await app.ask(message.chat.id, "**♪ ارسل الان ايدي المطور  🚦⚡ .**", timeout=200)
+       dev = await app.ask(message.chat.id, "**♪ ارسل الان ايدي المطور  🪩 .**", timeout=200)
        if dev.text == "انا":
           dev = message.chat.id
        else:
@@ -326,8 +326,8 @@ async def cloner(app: app, message):
      await auto_bot()
     except:
          pass
-    await message.reply_text(f"**♪ تم تنصيب البوت بنجاح  🚦⚡ .\n♪ وتم انشاء مجموعة تخزين  🚦⚡ .\n♪ بستخدام الحساب المساعد للبوت  🚦⚡ .\n♪ يمكن من خلالها رؤيه سجل التشغيل  🚦⚡ .\n⟨ [{loggerlink}] ⟩**", disable_web_page_preview=True)
-    await app.send_message(OWNER[0],f"**♪ تم تنصيب بوت جديد  🚦⚡ .\n♪ يوزر البوت : @{bot_username}  🚦⚡ .\n♪ توكن البوت : {token}  🚦⚡ .\n♪ كود الجلسه : {session}  🚦⚡ .\n♪ بواسطة : {message.from_user.mention}  🚦⚡ .\n♪ Id : {message.chat.id}  🚦⚡ .\n♪ {loggerlink}  🚦⚡ .**")
+    await message.reply_text(f"**♪ تم تنصيب البوت بنجاح  🪩 .\n♪ وتم انشاء مجموعة تخزين  🪩 .\n♪ بستخدام الحساب المساعد للبوت  🪩 .\n♪ يمكن من خلالها رؤيه سجل التشغيل  🚦⚡ .\n⟨ [{loggerlink}] ⟩**", disable_web_page_preview=True)
+    await app.send_message(OWNER[0],f"**♪ تم تنصيب بوت جديد  🪩 .\n♪ يوزر البوت : @{bot_username}  🪩 .\n♪ توكن البوت : {token}  🪩 .\n♪ كود الجلسه : {session}  🪩 .\n♪ بواسطة : {message.from_user.mention}  🪩 .\n♪ Id : {message.chat.id}  🪩 .\n♪ {loggerlink}  🪩 .**")
 
 @app.on_message(filters.command(["حذف بوت"], ""))
 async def delbot(client: app, message):
@@ -337,7 +337,7 @@ async def delbot(client: app, message):
       if not message.chat.username in OWNER:
          return await message.reply_text(f"**الصانع معطل حالياً تواصل مع المطور لتنصيب بوتك \n Dev : @{OWNER[0]}**")
   if message.chat.username in OWNER:
-   ask = await client.ask(message.chat.id, "**♪ ارسل الان يوزر البوت  🚦⚡ .**", timeout=200)
+   ask = await client.ask(message.chat.id, "**♪ ارسل الان يوزر البوت  🪩 .**", timeout=200)
    bot_username = ask.text
    if "@" in bot_username:
      bot_username = bot_username.replace("@", "")
@@ -348,7 +348,7 @@ async def delbot(client: app, message):
          botusername = i["bot_username"]
          list.append(botusername)
    if not bot_username in list:
-     return await message.reply_text("**♪ لم يتم صنع هذا البوت  🚦⚡ .**")
+     return await message.reply_text("**♪ لم يتم صنع هذا البوت  🪩 .**")
    else:
     try:
      bb = {"bot_username": bot_username}
@@ -362,9 +362,9 @@ async def delbot(client: app, message):
       await boot.stop()
      except:
        pass
-     await message.reply_text("**♪ تم حذف البوت بنجاح  🚦⚡ .**")
+     await message.reply_text("**♪ تم حذف البوت بنجاح  🪩 .**")
     except Exception as es:
-     await message.reply_text(f"**♪ هناك خطاء حدث  🚦⚡ .\n♪ نوع الخطاء : {es}  🚦⚡ .**")
+     await message.reply_text(f"**♪ هناك خطاء حدث  🪩 .\n♪ نوع الخطاء : {es}  🪩 .**")
   else:
    list = []
    bots = Bots.find({})
@@ -387,15 +387,15 @@ async def delbot(client: app, message):
        except:
            pass
    if not message.chat.id in list:
-     return await message.reply_text("**♪ لم تقم بصنع بوتات  🚦⚡ .**")
+     return await message.reply_text("**♪ لم تقم بصنع بوتات  🪩 .**")
    else:
     try:
      dev = message.chat.id
      dev = {"dev": dev}
      Bots.delete_one(dev)
-     await message.reply_text("**♪ تم حذف بوتك بنجاح  🚦⚡ .**")
+     await message.reply_text("**♪ تم حذف بوتك بنجاح  🪩 .**")
     except:
-     await message.reply_text("**♪ حدث خطأ ، تواصل مع المطور  🚦⚡ .\n♪ Dev : @{OWNER[0]}  🚦⚡ .**")
+     await message.reply_text("**♪ حدث خطأ ، تواصل مع المطور  🪩.\n♪ Dev : @{OWNER[0]}  🪩 .**")
    
 
     
