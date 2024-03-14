@@ -980,7 +980,7 @@ async def pipong(client: Client, message: Message):
 	    
 	    
 @Client.on_message(
-    filters.command(["أوامر", "اوامري", "الأوامر", "الاوامر", " اوامر"], "")
+    filters.command(["سورس", "السورس", "الأوامر", "الاوامر", " اوامر"], "")
 )
 async def alive(client: Client, message):
     chat_id = message.chat.id
