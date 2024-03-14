@@ -934,29 +934,26 @@ async def alive(client: Client, message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("𝗚𝗿𝗼𝘂𝗽 🖱️", url=f"{gr}"),
-                InlineKeyboardButton("𝗖𝗵𝗮𝗻𝗻𝗲𝗹 🖱️", url=f"{ch}"),
+                InlineKeyboardButton(" 𝙶𝚁𝙾𝚞𝙿 ‌", url=f"{gr}"),
+                InlineKeyboardButton(" 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 ", url=f"{ch}"),
             ],
             [
                  InlineKeyboardButton(f"{OWNER_NAME}", url=f"https://t.me/{OWNER[0]}")
             ],
             [ 
-                 InlineKeyboardButton("اضف البوت الي مجموعتك ❤️", url="https://t.me/{app.username}?startgroup=true")
+                 InlineKeyboardButton("اضف البوت الي مجموعتك ", url="https://t.me/{client.me.username}?startgroup=true")
             ]
         ]
     )
 
-    alive = f"""╭──── • ◈ • ────╮
-么 [SOURCE AFROTOO](t.me/UI_VM) 💎 .
-么  [DEV AFROTOO](t.me/VVYVVJ) 💎 .
-╰──── • ◈ • ────╯
-🚦 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙾𝙽 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼  💎 ."""
+    alive = f"""
+ 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙾𝙽 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼   ."""
 
-    await message.reply_video(
-        video=VIDEO,
+    await message.reply_photo(
+        photo=VIDEO,
         caption=alive,
         reply_markup=keyboard,
-    )
+)
 
 @Client.on_message(filters.command(["/ping", "بنج"], ""))
 async def ping_pong(client: Client, message: Message):
@@ -980,7 +977,7 @@ async def pipong(client: Client, message: Message):
 	    
 	    
 @Client.on_message(
-    filters.command(["أوامر", "اوامري", "الأوامر", "الاوامر", "• اوامر"], "")
+    filters.command(["أوامر", "اوامري", "الأوامر", "الاوامر", " اوامر"], "")
 )
 async def alive(client: Client, message):
     chat_id = message.chat.id
@@ -989,8 +986,8 @@ async def alive(client: Client, message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("اللغة العربية 🇪🇬", callback_data="arbic"),
-                InlineKeyboardButton("English language 🇺🇲", callback_data="english"),
+                InlineKeyboardButton("العربية 🇪🇬", callback_data="arbic"),
+                InlineKeyboardButton("English 🇺🇲", callback_data="english"),
             ],
             [
                  InlineKeyboardButton(f"{OWNER_NAME}", url=f"https://t.me/{OWNER[0]}")
