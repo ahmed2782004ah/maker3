@@ -1,5 +1,5 @@
 # متطلبات التنصيب #
-OWNER = ["K_O_W_5", "IIUll_l"]
+OWNER = ["K_O_W_4", "IIUll_l"]
 OWNER_NAME = "ْ𓆩⧛ َ 𝘼َِ𝙁َِ𝙍َِ𝙊َِ𝙊َِ𝙏َِ𝙊ِ ┇ عـ๋͜‏ـۂفــ͡ـࢪتوُ ⧚𓆪"
 BOT_TOKEN = "6430322526:AAFXcmRTgreTlwMspO2KCqRY-33xuXIz-bs"
 DATABASE = "mongodb+srv://bot_vambir:Al2552001@cluster0.heabj.mongodb.net/vambir_bot?retryWrites=true&w=majority"
