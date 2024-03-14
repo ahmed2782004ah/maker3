@@ -324,6 +324,16 @@ async def VVYVVJ(client, message):
 ["رجوع للقائمة الرئيسيه"]], resize_keyboard=True)
     await message.reply_text(f"**♪ مرحبا بك في قسم ⟨ البوت ⟩  💎 .**", reply_markup=kep,quote=True)
 
+@Client.on_message(filters.command(["قسم الاذاعه", "رجوع"], ""))
+async def VVYVVJ(client, message):
+  bot_username = client.me.username
+  dev = await get_dev(bot_username)
+  chat = message.chat.id
+  uesr = message.chat.username
+  if chat == dev or uesr in OWNER:
+    kep = ReplyKeyboardMarkup([["• اذاعه عام •"], ["• اذاعه للمجموعات •", "• اذاعه للمستخدمين •"], ["• توجيه عام •"], ["• توجيه للمجموعات •", "• توجيه للمستخدمين •"], ["• رجوع للقائمة الرئيسيه •"]], resize_keyboard=True)
+    await message.reply_text("أهلا بك عزيزي المطور \nهنا قسم الاذاعه تحكم بالازار", reply_markup=kep)
+
 ############//((/start))//############
 
 bot = [
