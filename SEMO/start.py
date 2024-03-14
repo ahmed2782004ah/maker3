@@ -977,39 +977,39 @@ async def pipong(client: Client, message: Message):
             return
     await message.reply_text("تم تفعيل البوت بنجاح ✅")
     return 
+	    
+	    
+@Client.on_message(
+    filters.command(["أوامر", "اوامري", "الأوامر", "الاوامر", "• اوامر"], "")
+)
+async def alive(client: Client, message):
+    chat_id = message.chat.id
+    ch = await get_channelsr(client.me.username)
+    gr = await get_groupsr(client.me.username)
+    keyboard = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton("اللغة العربية 🇪🇬", callback_data="arbic"),
+                InlineKeyboardButton("English language 🇺🇲", callback_data="english"),
+            ],
+            [
+                 InlineKeyboardButton(f"{OWNER_NAME}", url=f"https://t.me/{OWNER[0]}")
+            ],
+            [ 
+                 InlineKeyboardButton("اضف البوت الي مجموعتك ❤️", url="https://t.me/{app.username}?startgroup=true")
+            ]
+        ]
+    )
 
-@app.on_message(filters.command(["/help", "الاوامر", "اوامر"], ""))
-async def starhelp(client: Client, message: Message):
-    if not message.chat.type == enums.ChatType.PRIVATE:
-      if await joinch(message):
-            return
-    bot = await client.get_me()
-    photo = bot.photo.big_file_id
-    photo = await client.download_media(photo)
-    await message.reply_photo(
-        photo=photo,
-        caption=f"",
-        reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton("اللغة العربية 🇪🇬", callback_data="arbic")
-                        ],
-                        [   
-                            InlineKeyboardButton("English language 🇺🇲", callback_data="english")
-                        ],
-                        [
-                            InlineKeyboardButton("SeMo ElKbEr 🥷", user_id=f"ahmedelnqyb")
-                        ],
-                        [
-                            InlineKeyboardButton("اضف البوت الي مجموعتك ❤️", url="https://t.me/{bot.username}?startgroup=true")
-                        ],
-                    ]                         
-                )
-            )
-    try:
-      os.remove(photo)
-    except:
-       pass
+    alive = f"""
+ 𝚃𝙷𝙴 𝙱𝙴𝚂𝚃 𝚂𝙾𝚄𝚁𝙲𝙴 𝙾𝙽 𝚃𝙴𝙻𝙴𝙶𝚁𝙰𝙼  ."""
+
+    await message.reply_video(
+        video=VIDEO,
+        caption=alive,
+        reply_markup=keyboard,
+    )
+
 
 @Client.on_message(filters.command(["المطور عفرتو","عفرتو","المبرمج"], ""))
 async def deev(client: Client, message: Message):
