@@ -12,7 +12,7 @@ async def arbic(client: Client, query: CallbackQuery):
     dev = await get_dev(bot.username)
     devname = await get_dev_name(client, bot.username)
     await query.answer("القائمة الرئيسية")
-    await query.edit_message_text(f"**{query.from_user.mention} : مرحباً بك عزيزي **\n\n**انا بوت تشغيل موسيقى صوتية ومرئية .⚡**\n**قم بإضافة البوت إلي مجموعتك او قناتك .⚡**\n**سيتم تفعيل البوت وانضمام المساعد تلقائياً**\n**في حال مواجهت مشاكل انضم هنا **\n**@ **\n**استخدم الازرار لمعرفه اوامر الاستخدام .⚡ **",
+    await query.edit_message_text(f"**{query.from_user.mention} : مرحباً بك عزيزي **\n\n**انا بوت تشغيل موسيقى صوتية ومرئية .⚡**\n**قم بإضافة البوت إلي مجموعتك او قناتك .⚡**\n**سيتم تفعيل البوت وانضمام المساعد تلقائياً**\n**في حال مواجهة مشاكل انضم هنا **\n**@ **\n**استخدم الازرار لمعرفه اوامر الاستخدام .⚡ **",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
