@@ -325,7 +325,7 @@ async def VVYVVJ(client, message):
     await message.reply_text(f"**♪ مرحبا بك في قسم ⟨ البوت ⟩  💎 .**", reply_markup=kep,quote=True)
 
 @Client.on_message(filters.command(["قسم الاذاعه", "رجوع"], ""))
-async def VVYVVJ(client, message):
+async def cast(client, message):
   bot_username = client.me.username
   dev = await get_dev(bot_username)
   chat = message.chat.id
