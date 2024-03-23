@@ -1,8 +1,8 @@
 from pyrogram import filters, Client
 from pyrogram import Client as app
 from config import API_ID, API_HASH, MONGO_DB_URL, appp, user as usr, helper as ass, call, OWNER, OWNER_NAME, CHANNEL, GROUP, VID_SO
-from source.info import Call, activecall, helper, active
-from source.Data import db, dev, devname, set_must, get_data
+from SEMO.info import Call, activecall, helper, active
+from SEMO.Data import db, dev, devname, set_must, get_data
 from pyrogram.raw.types import InputPeerChannel
 from pyrogram.raw.functions.phone import CreateGroupCall
 from pytgcalls import PyTgCalls
@@ -50,8 +50,8 @@ async def auto_bot():
         devo = i["dev"]
         Done.append(bot_username)
         logger = i["logger"]
-        bot = Client("source", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN, in_memory=True, plugins=dict(root="source"))
-        user = Client("source", api_id=API_ID, api_hash=API_HASH, session_string=SESSION, in_memory=True)
+        bot = Client("SEMO", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN, in_memory=True, plugins=dict(root="source"))
+        user = Client("SEMO", api_id=API_ID, api_hash=API_HASH, session_string=SESSION, in_memory=True)
         await bot.start()
         await user.start()
         appp[bot_username] = bot
