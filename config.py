@@ -1,10 +1,10 @@
 import os
 from os import getenv
 from dotenv import load_dotenv
-from OWNER import BOT_TOKEN, OWNER, OWNER_NAME, DATABASE, CHANNEL, GROUP, LOGS, VIDEO
+from OWNER import BOT_TOKEN, OWNER, OWNER_NAME, DATABASE, CHANNEL, GROUP, LOGS, PHOTO, VID_SO
 
-if os.path.exists("local.env"):
-    load_dotenv("local.env")
+
+load_dotenv()
 
 load_dotenv()
 admins = {}
@@ -19,13 +19,14 @@ helper = {}
 
 
 
-API_ID = int(getenv("API_ID", "25901632"))
-API_HASH = getenv("API_HASH", "caac15797ce3785ae427cda6318b85c9")
+API_ID = int(getenv("API_ID", "8186557"))
+API_HASH = getenv("API_HASH", "efd77b34c69c164ce158037ff5a0d117")
 BOT_TOKEN = BOT_TOKEN
 MONGO_DB_URL = DATABASE
-OWNER = OWNER
+OWNER = OWNER 
 OWNER_NAME = OWNER_NAME
 CHANNEL = CHANNEL
 GROUP = GROUP
+PHOTO = PHOTO
 LOGS = LOGS
-VIDEO = VIDEO
+VID_SO = VID_SO
